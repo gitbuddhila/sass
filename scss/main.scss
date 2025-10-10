@@ -1,0 +1,19 @@
+@use './resets';
+@use '_variables';
+
+body{
+    background-color: $primary-color;
+    color: $text-color;
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+
+    &__para{
+        font-weight: map-get($font-weight,bold );
+
+        &:hover{
+            color: bisque;
+        }
+    }
+}
