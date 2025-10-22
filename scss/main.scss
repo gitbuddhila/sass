@@ -27,7 +27,9 @@
 // 6. UTILITIES/HELPERS (Utility classes)
 // Helper classes for quick styling
 @use 'utils/helpers';
-
+// 5. PAGES (Page-level styles)
+@use 'pages/home';
+@use 'pages/contact';
 // ==========================================
 // NOTES:
 // - All partials start with underscore (_filename.scss)

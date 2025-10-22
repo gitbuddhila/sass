@@ -7,7 +7,7 @@
     left: $spacing-md;
     display: flex;
     gap: $spacing-sm;
-    z-index: $header-z-index;
+    z-index: 10; // Increased z-index to ensure visibility above other elements
 
     a {
         display: inline-flex;

@@ -4,7 +4,7 @@
 .home {
     height: 100%;
     padding-top: 40vh;
-    overflow: hidden;
+    overflow: visible; // Changed from hidden to show social icons
     text-align: center;
     
     // Background image

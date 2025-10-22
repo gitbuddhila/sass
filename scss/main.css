@@ -102,6 +102,7 @@ section {
   z-index: 1;
   opacity: 0;
   visibility: hidden;
+  overflow: visible;
   transition: all 0.3s ease-in-out;
 }
 .nav.open {
@@ -116,7 +117,7 @@ section {
   justify-content: center;
   height: 100%;
   list-style: none;
-  background: rgba(0, 128, 0, 0.95);
+  background: rgba(0, 128, 0, 0.55);
 }
 .menu-nav__item {
   margin: 1rem 0;
@@ -159,7 +160,7 @@ section {
   left: 1rem;
   display: flex;
   gap: 0.4rem;
-  z-index: 2;
+  z-index: 10;
 }
 .social-icons a {
   display: inline-flex;
@@ -400,4 +401,37 @@ section {
 
 .pr-5 {
   padding-right: 5rem;
+}
+
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: visible;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 128, 0, 0.3), rgba(0, 128, 0, 0.7)), url("../images/cartoon-cute-school-boy-photo - Copy - Copy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.home__name {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  color: white;
+}
+.home__name-last {
+  color: blue;
+  font-weight: bold;
+}
+.home h2 {
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+body.contact {
+  background-color: white !important;
+  margin: 98px 92px 96px !important;
+  height: auto !important;
+  overflow-x: visible !important;
 }/*# sourceMappingURL=main.css.map */

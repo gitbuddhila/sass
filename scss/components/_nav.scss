@@ -10,6 +10,7 @@
     z-index: $nav-z-index;
     opacity: 0;
     visibility: hidden;
+    overflow: visible;
     transition: all $transition-duration $transition-easing;
 
     &.open {
@@ -25,7 +26,7 @@
     justify-content: center;
     height: 100%;
     list-style: none;
-    background: rgba($primary-color, 0.95);
+    background: rgba($primary-color, 0.55);
     
     &__item {
         margin: $spacing-md 0;
