@@ -1,0 +1,23 @@
+// Utility Classes
+
+// Display utilities
+.d-flex { display: flex; }
+.d-block { display: block; }
+.d-none { display: none; }
+
+// Text utilities
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+// Spacing utilities
+@for $i from 0 through 5 {
+    .mt-#{$i} { margin-top: #{$i}rem; }
+    .mb-#{$i} { margin-bottom: #{$i}rem; }
+    .ml-#{$i} { margin-left: #{$i}rem; }
+    .mr-#{$i} { margin-right: #{$i}rem; }
+    .pt-#{$i} { padding-top: #{$i}rem; }
+    .pb-#{$i} { padding-bottom: #{$i}rem; }
+    .pl-#{$i} { padding-left: #{$i}rem; }
+    .pr-#{$i} { padding-right: #{$i}rem; }
+}

@@ -1,0 +1,39 @@
+@use '../utils/variables' as *;
+
+// Home Page Styles
+.home {
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    text-align: center;
+    
+    // Background image
+    background: linear-gradient(
+        to bottom,
+        rgba($primary-color, 0.3),
+        rgba($primary-color, 0.7)
+    ),
+    url('../images/cartoon-cute-school-boy-photo - Copy - Copy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    // Hero content
+    &__name {
+        font-size: clamp(2rem, 5vw, 4rem);
+        margin-bottom: $spacing-md;
+        color: $text-color;
+        
+        &-last {
+            color: $secondary-color;
+            font-weight: bold;
+        }
+    }
+    
+    h2 {
+        font-size: clamp(1rem, 3vw, 2rem);
+        color: $text-color;
+        margin-bottom: $spacing-lg;
+        font-weight: $font-weight-normal;
+    }
+}

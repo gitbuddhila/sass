@@ -1,0 +1,28 @@
+@use '../utils/variables' as *;
+
+// Social Icons Component
+.social-icons {
+    position: fixed;
+    bottom: $spacing-md;
+    left: $spacing-md;
+    display: flex;
+    gap: $spacing-sm;
+    z-index: $header-z-index;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-sm;
+        transition: all $transition-duration $transition-easing;
+        
+        &:hover {
+            color: $secondary-color;
+            transform: translateY(-3px);
+        }
+        
+        i {
+            font-size: 2rem;
+        }
+    }
+}

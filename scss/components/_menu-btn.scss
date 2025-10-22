@@ -1,0 +1,51 @@
+@use '../utils/variables' as *;
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all $transition-duration $transition-easing;
+    z-index: $header-z-index + 1;
+
+    &__burger {
+        width: 30px;
+        height: 3px;
+        background: $text-color;
+        transition: all $transition-duration $transition-easing;
+        
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background: $text-color;
+            transition: all $transition-duration $transition-easing;
+        }
+        
+        &::before {
+            transform: translateY(-8px);
+        }
+        
+        &::after {
+            transform: translateY(8px);
+        }
+    }
+
+    // Open state
+    &.open &__burger {
+        background: transparent;
+        
+        &::before {
+            transform: rotate(45deg);
+        }
+        
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}

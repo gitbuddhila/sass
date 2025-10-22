@@ -1,19 +1,37 @@
-@use './resets';
-@use '_variables';
+// ==========================================
+// MAIN STYLESHEET - Component-Based Architecture
+// ==========================================
 
-body{
-    background-color: $primary-color;
-    color: $text-color;
-}
-.main{
-    width: 80%;
-    margin: 0 auto;
+// 1. UTILITIES (Variables, Mixins, Functions)
+// These don't generate CSS, just define variables and tools
+@use 'utils/variables';
+@use 'utils/mixins';
 
-    &__para{
-        font-weight: map-get($font-weight,bold );
+// 2. BASE (Reset, Typography, Global Styles)
+// Foundation styles that apply everywhere
+@use 'base/reset';
+@use 'base/typography';
 
-        &:hover{
-            color: bisque;
-        }
-    }
-}
+// 3. LAYOUT (Grid, Container, Header, Footer structure)
+// Structural components for page layout
+@use 'layout/main';
+
+// 4. COMPONENTS (Reusable UI Components)
+// Independent, modular UI elements
+@use 'components/header';
+@use 'components/menu-btn';
+@use 'components/nav';
+@use 'components/social-icons';
+@use 'components/footer';
+
+// 6. UTILITIES/HELPERS (Utility classes)
+// Helper classes for quick styling
+@use 'utils/helpers';
+
+// ==========================================
+// NOTES:
+// - All partials start with underscore (_filename.scss)
+// - @use instead of @import for better module system
+// - Order matters: base → layout → components → pages
+// - Each component is isolated and reusable
+// ==========================================

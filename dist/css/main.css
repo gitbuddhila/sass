@@ -1,0 +1,429 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: green;
+  color: blue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+a {
+  color: ivory;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn__burger::before, .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
+.menu-btn.open .menu-btn__burger {
+  background: transparent;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.nav.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+  background: rgba(0, 128, 0, 0.95);
+}
+.menu-nav__item {
+  margin: 1rem 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.menu-nav__item.active .menu-nav__link {
+  color: blue;
+}
+.menu-nav__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.menu-nav__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.menu-nav__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.menu-nav__item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.menu-nav__link {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  transition: color 0.3s ease-in-out;
+}
+.menu-nav__link:hover {
+  color: blue;
+}
+
+.nav.open .menu-nav__item {
+  transform: translateX(0);
+}
+
+.social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 2;
+}
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  transition: all 0.3s ease-in-out;
+}
+.social-icons a:hover {
+  color: blue;
+  transform: translateY(-3px);
+}
+.social-icons a i {
+  font-size: 2rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  z-index: 2;
+}
+
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 128, 0, 0.3), rgba(0, 128, 0, 0.7)), url("../images/cartoon-cute-school-boy-photo - Copy - Copy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.home__name {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  color: white;
+}
+.home__name-last {
+  color: blue;
+  font-weight: bold;
+}
+.home h2 {
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-0 {
+  margin-top: 0rem;
+}
+
+.mb-0 {
+  margin-bottom: 0rem;
+}
+
+.ml-0 {
+  margin-left: 0rem;
+}
+
+.mr-0 {
+  margin-right: 0rem;
+}
+
+.pt-0 {
+  padding-top: 0rem;
+}
+
+.pb-0 {
+  padding-bottom: 0rem;
+}
+
+.pl-0 {
+  padding-left: 0rem;
+}
+
+.pr-0 {
+  padding-right: 0rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pl-2 {
+  padding-left: 2rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
+.mr-3 {
+  margin-right: 3rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+.pl-3 {
+  padding-left: 3rem;
+}
+
+.pr-3 {
+  padding-right: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.ml-4 {
+  margin-left: 4rem;
+}
+
+.mr-4 {
+  margin-right: 4rem;
+}
+
+.pt-4 {
+  padding-top: 4rem;
+}
+
+.pb-4 {
+  padding-bottom: 4rem;
+}
+
+.pl-4 {
+  padding-left: 4rem;
+}
+
+.pr-4 {
+  padding-right: 4rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.ml-5 {
+  margin-left: 5rem;
+}
+
+.mr-5 {
+  margin-right: 5rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
+.pl-5 {
+  padding-left: 5rem;
+}
+
+.pr-5 {
+  padding-right: 5rem;
+}/*# sourceMappingURL=main.css.map */

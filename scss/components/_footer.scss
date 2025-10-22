@@ -1,0 +1,12 @@
+@use '../utils/variables' as *;
+
+// Footer Component
+.footer {
+    position: fixed;
+    bottom: $spacing-sm;
+    right: $spacing-md;
+    padding: $spacing-md;
+    font-size: 1rem;
+    color: $text-color;
+    z-index: $header-z-index;
+}

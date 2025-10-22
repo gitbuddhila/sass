@@ -1,0 +1,17 @@
+@use '../utils/variables' as *;
+
+body {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: $font-stack;
+}
+
+h1, h2, h3 {
+    font-weight: $font-weight-medium;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color $transition-duration $transition-easing;
+}
